@@ -3,6 +3,11 @@
 ## Description
 Le projet "Projet_oracle_banque" est une application Python conçue pour effectuer des analyses sur des données financières stockées dans une base de données Oracle. L'application utilise l'interface graphique Tkinter pour fournir une interface utilisateur conviviale pour exécuter des requêtes SQL prédéfinies et afficher les résultats sous forme de tableaux et de graphiques.
 
+- **dwh_py_menu.py** crée une interface utilisateur graphique simple à l'aide de Tkinter, qui permet à l'utilisateur d'exécuter des requêtes SQL sur une base de données Oracle et d'afficher les résultats dans la même interface graphique.
+- **DWH-BANQUE.sql** est un script SQL utilisé pour créer un schéma de base de données, peupler les tables avec des données de référence et principales, et effectuer quelques requêtes d'analyse sur les données bancaires.
+- **queries.py** contient des requêtes SQL prédéfinies pour récupérer des informations spécifiques à partir de la base de données, telles que la plus grosse catégorie de dépenses, la plus grosse sous-catégorie de revenus et l'évolution du solde client. Ces requêtes sont utilisées dans le programme principal pour interagir avec la base de données et afficher les résultats dans l'interface utilisateur.
+- **balance-2020.csv** contient les valeurs à insérer dans la bdd.
+
 ## Fonctionnalités
 - Affichage de la plus grosse catégorie de dépense.
 - Affichage de la plus grosse sous-catégorie de revenu.
