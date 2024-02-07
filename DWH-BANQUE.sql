@@ -154,7 +154,7 @@ FETCH FIRST 1 ROW ONLY;
 -- Quelles est l’évolution du solde client à travers le temps ?
 
 SELECT DATE_FK, 
-       SUM(CASE WHEN CODE_FK = 'C' THEN TRANS_VAL ELSE -TRANS_VAL END) AS Solde_Client
+       SUM(TRANS_VAL) AS Solde_Client
 FROM F_TRANSACTION
 GROUP BY DATE_FK
 ORDER BY DATE_FK;
