@@ -1,4 +1,4 @@
-# Projet Projet_oracle_banque
+# Projet_oracle_banque
 
 ## Description
 Le projet "Projet_oracle_banque" est une application Python conçue pour effectuer des analyses sur des données financières stockées dans une base de données Oracle. L'application utilise l'interface graphique Tkinter pour fournir une interface utilisateur conviviale pour exécuter des requêtes SQL prédéfinies et afficher les résultats sous forme de tableaux et de graphiques.
