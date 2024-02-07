@@ -69,7 +69,7 @@ SELECT DISTINCT DATE_DE_COMPTABILISATION
 FROM BANQUE_ODS;
 
 INSERT INTO D_CODE_T (C_OU_D)
-SELECT 'C' FROM DUAL UNION ALL
+SELECT 'C' FROM DUAL UNION ALL -- Pseudo-table DUAL et on les combine
 SELECT 'D' FROM DUAL;
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

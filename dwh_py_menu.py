@@ -1,4 +1,11 @@
-'''...'''
+'''
+    -tkinter: Bibliothèque graphique pour créer des interfaces utilisateur.
+    -tkinter.ttk: Widgets de thème amélioré pour tkinter.
+    -oracledb: Module pour se connecter et interagir avec une base de données Oracle.
+    -matplotlib.pyplot: Bibliothèque pour créer des visualisations et des graphiques en Python.
+    -matplotlib.backends.backend_tkagg: Module pour intégrer des graphiques matplotlib dans une 
+     interface tkinter.
+'''
 import tkinter as tk
 import tkinter.ttk as ttk
 import oracledb
@@ -12,19 +19,31 @@ from queries import (
 )
 
 def run_query(query):
-    '''...'''
+    '''
+    Exécute la requête SQL donnée et retourne le premier résultat.
+    Args:
+        query (str): La requête SQL à exécuter.
+
+    Returns:
+        tuple: Le premier résultat de la requête.
+    '''
     cursor.execute(query)
     result = cursor.fetchone()
     return result
 
 def display_result(result, label):
-    '''...'''
+    '''
+    Affiche le résultat dans l'étiquette donnée.
+    Args:
+        result (tuple): Le résultat à afficher.
+        label (tk.Label): L'étiquette dans laquelle afficher le résultat.
+    '''
     label.config(text=result)
 
 def open_new_window():
-    '''...'''
+    '''Ouvre une nouvelle fenêtre pour afficher l'évolution du solde client.'''
     def close_new_window():
-        '''...'''
+        '''Ferme la nouvelle fenêtre.'''
         print("Fermeture de la nouvelle fenêtre")
         new_window.destroy()
 
@@ -70,7 +89,7 @@ def open_new_window():
     canvas.get_tk_widget().config(yscrollcommand=scrollbar_canvas.set)
 
 def on_closing():
-    '''...'''
+    '''Ferme la fenêtre principale et les connexions à la base de données.'''
     print("Fermeture de la fenêtre principale")
     if not cursor.close:
         cursor.close()
@@ -78,6 +97,7 @@ def on_closing():
         conn.close()
     root.quit()
 
+# Établir une connexion à la base de données
 conn = oracledb.connect(user='system', password='root', host="localhost", port=1521)
 cursor = conn.cursor()
 
